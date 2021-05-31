@@ -8,7 +8,7 @@ var mongoose= require('mongoose');
 //importar rutas
 const indexRoutes = require('./routes/index');
 
-app.set('port', process.env.PORT | 3001)
+app.set('port', process.env.PORT || 3001)
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
